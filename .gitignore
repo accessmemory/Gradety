@@ -1,0 +1,55 @@
+# See https://github.com/github/gitignore
+
+#
+# Ignore Eclispe Stuff
+#
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+
+#
+# Ignore Windows Stuff
+#
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+
+#
+# Ignore Linux Stuff
+#
+.*
+!.gitignore
+*~
+
+# KDE
+.directory
