@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="gradety.css" />
+<title>Gradety Teamprojekt</title>
+</head>
+<body>
+
+    <section>
+            <div id = "links">
+        <nav>
+            <ul>
+                <li><a href="#" id="dashboard">Dashboard</a></li>
+                <li><a href="#" id='account'>Account</a></li>
+                <li><a href="#" id='files'>Files</a></li>
+                <li><a href="#" id='designs'>Designs</a></li>
+                <li><a href="#" id="pages">Pages</a></li>
+                <li><a href="#" id='settings'>Settings</a></li>
+            </ul>
+        </nav>
+           </div>
+    </section>
+    
+
+    <div id="bildbearbeitung">
+	    <div id="bildfaeche">
+			<input type="button" value="Take original" id="take_original">
+			<input type="button" value="Undo" id="udno">
+			<input type="button" value="Adjust" id="adjust">
+			<input type="button" value="Fit" id="fit">
+			Rectify: 
+			<input type="text" value="+/- = rechts/links" id="rectify">
+			Reflect: 
+			<input type="button" value="horizontal" id="horizontal"> 
+			<input type="button" value="vertical" id="vertical"> 
+			<input type="button" value="Done" id="done">
+			<hr>
+			<div id="bild">
+				<img alt="Pflanze" src="img/Pflanze.jpg">
+			</div>
+		</div>
+	   	
+	   	<div id="suchleiste">
+	    	Suchleiste:
+	    	<br/>
+	    	<input type="text" value="Suchbegriff" id="suchbegriff">
+	   	</div>
+	   	
+	</div>
+	
+	
+	
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script>
+		$('#dashboard, #account, #files, #designs, #settings').click(function(){
+			$('#bildbearbeitung').hide()
+		});
+	</script>
+	<script>
+		$('#pages').click(function(){
+			$('#bildbearbeitung').show()
+		});
+	</script>
+		<script>
+		$(document).ready(function(){
+			$('#bildbearbeitung').hide()
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
