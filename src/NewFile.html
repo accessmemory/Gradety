@@ -24,7 +24,7 @@
     
 
     <div id="bildbearbeitung">
-	    <div id="bildfaeche">
+	    <div id="bildbuttons">
 			<input type="button" value="Take original" id="take_original">
 			<input type="button" value="Undo" id="udno">
 			<input type="button" value="Adjust" id="adjust">
@@ -36,37 +36,53 @@
 			<input type="button" value="vertical" id="vertical"> 
 			<input type="button" value="Done" id="done">
 			<hr>
-			<div id="bild">
-				<img alt="Pflanze" src="img/Pflanze.jpg">
-			</div>
 		</div>
-	   	
-	   	<div id="suchleiste">
-	    	Suchleiste:
-	    	<br/>
-	    	<input type="text" value="Suchbegriff" id="suchbegriff">
-	   	</div>
-	   	
+		<div id="bildflaeche">
+			<img id="bild" alt="Pflanze" src="img/Pflanze.jpg">
+		</div>		
+	</div>
+	
+	<div id="suchleiste">
+	   	Suchleiste:
+	   	<br/>
+	   	<input type="text" value="Suchbegriff" id="suchbegriff">
 	</div>
 	
 	
 	
-	
 	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
+	<script type="text/javascript" src="js/shadow.js"></script>
 	<script>
-		$('#dashboard, #account, #files, #designs, #settings').click(function(){
-			$('#bildbearbeitung').hide()
+		$(function() {
+			$('#dashboard, #account, #files, #designs, #settings').click(function(){
+				$('#bildbearbeitung').hide(),
+				$("#suchleiste").hide()
+			});
+	
+			$('#pages').click(function(){
+				$('#bildbearbeitung').show(),
+				$("#suchleiste").show()
+			});
+			
+			$(document).ready(function(){
+				$('#bildbearbeitung').hide(),
+				$("#suchleiste").hide()
+			});
+			
+			$("#bild").draggable({containment: "#bildflaeche", scroll: false});
+			
+			//Einbinden eindes Widgets - Nur ein Beispiel
+			$("#pages").shadow({
+					color : "red",
+					size : "50px",
+					position : {
+						left : "3px",
+						top : "3px"
+					}
+				});
 		});
-	</script>
-	<script>
-		$('#pages').click(function(){
-			$('#bildbearbeitung').show()
-		});
-	</script>
-		<script>
-		$(document).ready(function(){
-			$('#bildbearbeitung').hide()
-		});
+		
 	</script>
 </body>
 </html>
